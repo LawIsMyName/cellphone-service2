@@ -39,6 +39,7 @@ public class CellPhoneApplication {
         // call 855-555-2222
         cellphone.dial("855-555-2222");
 
+        // make cellphones dial each other
         cellphone.dial(cellphone2.getPhoneNumber());
         cellphone2.dial(cellphone.getPhoneNumber());
 
