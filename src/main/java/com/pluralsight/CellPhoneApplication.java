@@ -8,7 +8,7 @@ public class CellPhoneApplication {
         Scanner scanner = new Scanner(System.in);
 
         // Get the phone's info
-        System.out.println("what is the serial number: " );
+        System.out.println("what is the serial number: ");
         int serialNumber = scanner.nextInt();
 
         scanner.nextLine(); ///eat the new line
@@ -29,15 +29,27 @@ public class CellPhoneApplication {
         CellPhone cellphone;
         cellphone = new CellPhone(serialNumber, model, carrier, phoneNumber, owner);
 
-        // Display the stored phone information using getters
-        System.out.println("serial number is:" + " " + cellphone.getSerialNumber());
-        System.out.println("phone model is:" + " " + cellphone.getModel());
-        System.out.println("carrier is:" + " " + cellphone.getCarrier());
-        System.out.println("phone number is:" + " " + cellphone.getPhoneNumber());
-        System.out.println("owner of the phone is:" + " " + cellphone.getOwner());
+        CellPhone cellphone2;
+        cellphone2 = new CellPhone(serialNumber, model, carrier, phoneNumber, owner);
+
+
+        display(cellphone);
+        display(cellphone2);
 
         // call 855-555-2222
         cellphone.dial("855-555-2222");
+
+
+    }
+
+    private static void display(CellPhone phone) {
+        System.out.println("-----------------------");
+        System.out.println("serial number is:" + " " + phone.getSerialNumber());
+        System.out.println("phone model is:" + " " + phone.getModel());
+        System.out.println("carrier is:" + " " + phone.getCarrier());
+        System.out.println("phone number is:" + " " + phone.getPhoneNumber());
+        System.out.println("owner of the phone is:" + " " + phone.getOwner());
+        System.out.println("-----------------------");
 
     }
 }
