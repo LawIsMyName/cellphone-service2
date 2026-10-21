@@ -32,7 +32,7 @@ public class CellPhoneApplication {
         CellPhone cellphone2;
         cellphone2 = new CellPhone(serialNumber, model, carrier, phoneNumber, owner);
 
-
+        // call on method to display everything twice
         display(cellphone);
         display(cellphone2);
 
